@@ -2,21 +2,27 @@ import java.util.Scanner;
 
 public class DiversasLeituras {
     public static void main(String args[]){
+        
+        /* Declaração de variáveis */
         Scanner teclado = new Scanner(System.in);
-        String texto;
-        System.out.println("Digite seu nome (e primeiro sobrenome): ");
-        texto = teclado.nextLine();
-        System.out.println("Seu nome usando nextline é: " + texto);
-        System.out.println("\n");
+        int codigo;
+        double preco;
+        String nome, texto;
 
-        Scanner teclado2 = new Scanner(System.in);
-        String Segundotexto;
-        System.out.println("Digite seu nome (e primeiro sobrenome): ");
-        Segundotexto = teclado.next();
-        System.out.println("Seu nome usando next é: " + Segundotexto);
+        /* Leitura e Impressão  */
+        System.out.println("Digite o codigo: "); /* Exibe mensagem solicitando o código */
+        texto = teclado.nextLine(); /* Lê toda a linha digitada como String */
+        codigo = Integer.parseInt(texto); /* Converte a String para int */
 
-        teclado.close();
-        teclado2.close();
-      
+        System.out.print("Digite o nome: "); /* Exibe mensagem solicitando o nome */
+        nome = teclado.nextLine(); /* Lê toda a linha digitada como String */
+
+        System.out.print("Digite o preco: "); /* Exibe mensagem solicitando o preço */
+        texto = teclado.nextLine(); /* Lê toda a linha digitada como String */
+        preco = Double.parseDouble(texto); /* Converte a String para double */
+
+        System.out.println("Voce digitou: " + codigo + " - " + nome + " R$ " + preco); /* Imprime os dados usando concatenação */
+
+        System.out.printf("Voce digitou %d - %s R$ %.2f\n", codigo, nome, preco); /* Imprime os dados usando formatação */
     }
 }

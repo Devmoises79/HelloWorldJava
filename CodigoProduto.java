@@ -39,8 +39,8 @@ public class CodigoProduto {
 
         System.out.println("Você digitou " + codigoProduto + " - " + nome + " R$ " + preco); /*Imprime os dados usando concatenação */
 
+        System.out.printf("Você digitou %d - %s R$ %f\n", codigoProduto, nome, preco); /*Imprime os dados usando String formatada */
 
-
-        teclado.close(); /* Fecha o Scanner */
+        
     }
 }
